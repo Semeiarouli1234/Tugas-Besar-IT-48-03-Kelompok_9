@@ -4,7 +4,7 @@ void menuUser(ListKomposer &LK, ListMusik &LM) {
     int opt = -1;
     while (opt != 0) {
         system("cls");
-        cout << "=== MENU USER (STUDY CASE POIN G-S) ===" << endl;
+        cout << "=== MENU USER ===" << endl;
         cout << "1. Cari Parent/Child/Relasi            " << endl;
         cout << "2. Lihat Musik dari Komposer Tertentu  " << endl;
         cout << "3. Lihat Semua Komposer & Musiknya     " << endl;

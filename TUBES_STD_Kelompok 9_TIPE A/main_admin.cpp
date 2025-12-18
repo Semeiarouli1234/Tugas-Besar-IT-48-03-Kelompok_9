@@ -4,7 +4,7 @@ void menuAdmin(ListKomposer &LK, ListMusik &LM) {
     int opt = -1;
     while (opt != 0) {
         system("cls");
-        cout << "=== MENU ADMIN (POIN a-f, j, k) ===" << endl;
+        cout << "=== MENU ADMIN ===" << endl;
         cout << "1. Kelola Komposer (Parent)\n2. Kelola Musik (Child)\n0. Kembali\nPilih: ";
         cin >> opt; clearBuffer();
         if (opt == 1) menuParent(LK);
@@ -72,7 +72,10 @@ void menuChild(ListMusik &LM, ListKomposer &LK) {
         cout << "=== MANAJEMEN MUSIK (CHILD) ===" << endl;
         cout << "1. Insert First\n2. Insert Last\n3. Insert After\n";
         cout << "4. Delete First\n5. Delete Last\n6. Delete After\n";
-        cout << "7. Insert Relation (c)\n8. Show All Musik\n0. Kembali\nPilih: ";
+        cout << "7. Insert Relation (c)\n";
+        cout << "8. Show All Musik\n";
+        cout << "9. Show Komposer dari Musik\n";
+        cout << "0. Kembali\nPilih: ";
         cin >> opt; clearBuffer();
 
         if (opt >= 1 && opt <= 3) {
@@ -123,6 +126,12 @@ void menuChild(ListMusik &LM, ListKomposer &LK) {
             system("pause");
         } else if (opt == 8) {
             showAllMusik(LM); system("pause");
+        } else if (opt == 9) {
+            string idM;
+            cout << "Masukkan ID Musik: ";
+            getline(cin, idM);
+            showMusikDanKomposer(LK, idM);
+            system("pause");
         }
     }
 }
